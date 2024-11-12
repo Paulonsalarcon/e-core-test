@@ -34,7 +34,7 @@ class InvoiceDetailsPage:
         self.browser_context.on("page", on_new_page)
 
         #Wait until new tab is open
-        while not tab_is_open or timer > 0:
+        while not tab_is_open and timer > 0:
             for page in self.browser_context.pages:
                 if self.URL_PATTERN in page.url:
                     page.bring_to_front()
