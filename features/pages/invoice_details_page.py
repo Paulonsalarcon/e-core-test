@@ -27,11 +27,13 @@ class InvoiceDetailsPage:
         timeout = config.TIMEOUT
         timer = timeout
         
+        #Defining listener for new tab
         def on_new_page(new_page):
             new_page.bring_to_front()
         
         self.browser_context.on("page", on_new_page)
 
+        #Wait until new tab is open
         while not tab_is_open or timer > 0:
             for page in self.browser_context.pages:
                 if self.URL_PATTERN in page.url:
@@ -44,10 +46,8 @@ class InvoiceDetailsPage:
         self.page.wait_for_load_state('load')
         assert self.URL_PATTERN in self.page.url, f"URL '{self.page.url}' does not contain '{self.URL_PATTERN}'"
 
+    #Generic field validator
     def validate_field(self, selector, expected_value):
-        # Validate the field value
-        print(self.page.url)
-        print(self.page.locator(selector).text_content())
         actual_value = self.page.locator(selector).text_content()
         assert expected_value in actual_value, f"Expected {expected_value}, but got {actual_value}"
 

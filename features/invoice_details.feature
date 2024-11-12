@@ -21,5 +21,5 @@ Feature: Invoice Details
     And Tax & VAT must be "<Tax&VAT>"
     And Total Amount must be "<TotalAmount>"
     Examples:
-      | HotelName       | InvoiceDate | DueDate   | InvoiceNumber | BookingCode | CustomerDetails                      | Room            | CheckIn   | CheckOut  | TotalStayCount | TotalStayAmount | DepositNow | Tax&VAT | TotalAmount |
-      | Rendezvous Hotel| 14/01/2018  | 15/01/2018| 110           | 0875        | JOHNY SMITHR2, AVENUE DU MAROC123456 | Superior Double | 14/01/2018| 15/01/2018| 1              | $150            | USD $20.90 | USD $19 | USD $209    |
+      | HotelName       | InvoiceDate | DueDate   | InvoiceNumber | BookingCode | CustomerDetails                       | Room            | CheckIn   | CheckOut  | TotalStayCount | TotalStayAmount | DepositNow | Tax&VAT    | TotalAmount |
+      | Rendezvous Hotel| 14/01/2018  | 15/01/2018| 110           | 0875        | JOHNY SMITHR2, AVENUE DU MAROC 123456 | Superior Double | 14/01/2018| 15/01/2018| 1              | $150            | USD $20.90 | USD $19.00 | USD $209.00 |

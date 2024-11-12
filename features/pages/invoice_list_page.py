@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, BrowserContext, expect
+from playwright.sync_api import BrowserContext, expect
 
 class InvoiceListPage:
     URL = 'https://automation-sandbox-python-mpywqjbdza-uc.a.run.app/account'

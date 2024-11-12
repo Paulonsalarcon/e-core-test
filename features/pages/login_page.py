@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, BrowserContext
+from playwright.sync_api import BrowserContext
 
 class LoginPage:
     URL = "https://automation-sandbox-python-mpywqjbdza-uc.a.run.app/"

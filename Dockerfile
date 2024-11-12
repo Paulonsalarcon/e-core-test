@@ -7,9 +7,9 @@ COPY features ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN playwright install --with-deps
+RUN playwright install chromium firefox --with-deps
 
 VOLUME ["./allure-results"]
 
-ENTRYPOINT ["sh", "-c", "behave -f allure_behave.formatter:AllureFormatter -o ./allure-results ./features"]
+ENTRYPOINT ["sh", "-c", "behave -f allure_behave.formatter:AllureFormatter -o ./allure-results/ ./features/"]
 
